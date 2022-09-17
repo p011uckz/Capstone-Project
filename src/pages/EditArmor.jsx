@@ -101,7 +101,7 @@ const EditArmor = ({ setArmor }) => {
     }
 
     useEffect(()=>{
-        axios.get(`http://localhost:3001/armor/${id}`)
+        axios.get(`https://ccp-backend.vercel.app//armor/${id}`)
         .then(res => {
             setFormData(res.data)
         })
