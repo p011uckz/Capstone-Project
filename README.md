@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+This is the front end for the CCP
+
+A user can view any of the pages for Races, core and prestige classes, armor, weapon, shields, items, feats and spells.
+A user can also view each item from each page specifically for more information.
+A user can also delete or create new items for each page, or edit existing items
