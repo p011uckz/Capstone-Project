@@ -91,7 +91,7 @@ const EditArmor = ({ setArmor }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://localhost:3001/armor/${id}`, formData )
+        axios.put(`http://https://ccp-backend.vercel.app//armor/${id}`, formData )
         .then(res => {
 
             setFormData(initialState)
