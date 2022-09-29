@@ -91,7 +91,7 @@ const EditArmor = ({ setArmor }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://https://ccp-backend.vercel.app/armor/${id}`, formData )
+        axios.put(`http://https://ccp-backend.vercel.app/api/armor/${id}`, formData )
         .then(res => {
 
             setFormData(initialState)
@@ -101,7 +101,7 @@ const EditArmor = ({ setArmor }) => {
     }
 
     useEffect(()=>{
-        axios.get(`https://ccp-backend.vercel.app/armor/${id}`)
+        axios.get(`https://ccp-backend.vercel.app/api/armor/${id}`)
         .then(res => {
             setFormData(res.data)
         })

@@ -54,13 +54,13 @@ const ViewSpell = ({ updateSpellState, Spell}) => {
     const [ spells, setSpell ] = useState()
 
     useEffect(()=> {
-        fetch(`http://https://ccp-backend.vercel.app/spell/${id}`)
+        fetch(`http://https://ccp-backend.vercel.app/api/spell/${id}`)
         .then(res => res.json())
         .then(data => setSpell(data))
     }, [])
 
     const deleteSpell = (id) => {
-    axios.delete(`http://https://ccp-backend.vercel.app/spell/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/api/spell/${id}`)
     .then(res => {
       console.log(res)
       updateSpellState(id)

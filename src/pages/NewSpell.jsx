@@ -90,7 +90,7 @@ const NewSpell = ({ addSpell }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://https://ccp-backend.vercel.app/spell', formData )
+        axios.post('http://https://ccp-backend.vercel.app/api/spell', formData )
         .then(res => {
             setFormData(initialState)
             addSpell({...res.data})

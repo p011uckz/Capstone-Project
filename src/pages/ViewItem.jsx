@@ -53,13 +53,13 @@ const ViewItem = ({updateItemState, item}) => {
     const [ items, setBaseClass ] = useState()
 
     useEffect(()=> {
-        fetch(`http://https://ccp-backend.vercel.app/item/${id}`)
+        fetch(`http://https://ccp-backend.vercel.app/api/item/${id}`)
         .then(res => res.json())
         .then(data => setBaseClass(data))
     }, [])
 
     const deleteItem = (id) => {
-        axios.delete(`http://https://ccp-backend.vercel.app/item/${id}`)
+        axios.delete(`http://https://ccp-backend.vercel.app/api/item/${id}`)
         .then(res => {
           console.log(res)
           updateItemState(id)
