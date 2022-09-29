@@ -123,7 +123,7 @@ const EditPrestige = ({ setPrestigeClass }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://localhost:3001/prestigeClass/${id}`, formData )
+        axios.put(`http://https://ccp-backend.vercel.app/prestigeClass/${id}`, formData )
         .then(res => {
 
             setFormData(initialState)
@@ -133,7 +133,7 @@ const EditPrestige = ({ setPrestigeClass }) => {
     }
 
     useEffect(()=>{
-        axios.get(`http://localhost:3001/prestigeClass/${id}`)
+        axios.get(`http://https://ccp-backend.vercel.app/prestigeClass/${id}`)
         .then(res => {
             setFormData(res.data)
         })

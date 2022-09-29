@@ -54,13 +54,13 @@ const ViewCore = ({updateBaseClassState, baseClass}) => {
     const [ baseClasses, setBaseClass ] = useState()
 
     useEffect(()=> {
-        fetch(`http://localhost:3001/baseClass/${id}`)
+        fetch(`http://https://ccp-backend.vercel.app/baseClass/${id}`)
         .then(res => res.json())
         .then(data => setBaseClass(data))
     }, [])
 
     const deleteBaseClass = (id) => {
-    axios.delete(`http://localhost:3001/baseClass/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/baseClass/${id}`)
     .then(res => {
       console.log(res)
       updateBaseClassState(id)

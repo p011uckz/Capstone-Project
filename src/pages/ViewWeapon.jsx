@@ -63,13 +63,13 @@ const ViewWeapon = ({ updateWeaponState, weapon }) => {
     const [ weapons, setWeapon ] = useState()
 
     useEffect(()=> {
-        fetch(`http://localhost:3001/weapon/${id}`)
+        fetch(`http://https://ccp-backend.vercel.app/weapon/${id}`)
         .then(res => res.json())
         .then(data => setWeapon(data))
     }, [])
 
     const deleteWeapon = (id) => {
-        axios.delete(`http://localhost:3001/weapon/${id}`)
+        axios.delete(`http://https://ccp-backend.vercel.app/weapon/${id}`)
         .then(res => {
           console.log(res)
           updateWeaponState(id)

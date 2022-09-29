@@ -121,7 +121,7 @@ const NewPrestigeClass = ({ addPrestige }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://localhost:3001/prestigeClass', formData )
+        axios.post('http://https://ccp-backend.vercel.app/prestigeClass', formData )
         .then(res => {
             setFormData(initialState)
             addPrestige({...res.data})

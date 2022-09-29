@@ -94,7 +94,7 @@ const EditWeapon = ({ setWeapon }) => {
     const handleSubmit = (e) => {
       e.preventDefault()
       console.log(formData)
-      axios.put(`http://localhost:3001/weapon/${id}`, formData )
+      axios.put(`http://https://ccp-backend.vercel.app/weapon/${id}`, formData )
       .then(res => {
 
         setFormData(initialState)
@@ -104,7 +104,7 @@ const EditWeapon = ({ setWeapon }) => {
     }
 
     useEffect(()=>{
-        axios.get(`http://localhost:3001/weapon/${id}`)
+        axios.get(`http://https://ccp-backend.vercel.app/weapon/${id}`)
         .then(res => {
             setFormData(res.data)
         })

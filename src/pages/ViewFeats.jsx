@@ -53,13 +53,13 @@ const ViewFeats = ({ updateFeatState, feat }) => {
     const [ feats, setFeat ] = useState()
 
     useEffect(()=> {
-        fetch(`http://localhost:3001/feat/${id}`)
+        fetch(`http://https://ccp-backend.vercel.app/feat/${id}`)
         .then(res => res.json())
         .then(data => setFeat(data))
     }, [])
 
     const deleteFeat = (id) => {
-        axios.delete(`http://localhost:3001/feat/${id}`)
+        axios.delete(`http://https://ccp-backend.vercel.app/feat/${id}`)
         .then(res => {
           console.log(res)
           updateFeatState(id)

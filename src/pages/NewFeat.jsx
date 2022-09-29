@@ -98,7 +98,7 @@ const NewFeat = ({ addFeat }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://localhost:3001/feat', formData )
+        axios.post('http://https://ccp-backend.vercel.app/feat', formData )
         .then(res => {
             setFormData(initialState)
             addFeat({...res.data})

@@ -91,7 +91,7 @@ const EditSpell = ({ setSpell }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://localhost:3001/spell/${id}`, formData )
+        axios.put(`http://https://ccp-backend.vercel.app/spell/${id}`, formData )
         .then(res => {
 
             setFormData(initialState)
@@ -101,7 +101,7 @@ const EditSpell = ({ setSpell }) => {
     }
 
     useEffect(()=>{
-        axios.get(`http://localhost:3001/spell/${id}`)
+        axios.get(`http://https://ccp-backend.vercel.app/spell/${id}`)
         .then(res => {
             setFormData(res.data)
         })

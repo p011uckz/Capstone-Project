@@ -90,7 +90,7 @@ const NewArmor = ({ addArmor }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://localhost:3001/armor', formData )
+        axios.post('http://https://ccp-backend.vercel.app/armor', formData )
         .then(res => {
             setFormData(initialState)
             addArmor({...res.data})

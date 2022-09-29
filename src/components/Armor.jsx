@@ -38,7 +38,7 @@ const Button = styled.button`
 const Armor = ({ updateArmorState, armor, armors }) => {
 
   const deleteArmor = (id) => {
-    axios.delete(`http://localhost:3001/armor/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/armor/${id}`)
     .then(res => {
       console.log(res)
       updateArmorState(id)

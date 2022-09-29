@@ -57,7 +57,7 @@ const Button = styled.button`
 const Feat = ({ feat, updateFeatState }) => {
 
   const deleteFeat = (id) => {
-    axios.delete(`http://localhost:3001/feat/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/feat/${id}`)
     .then(res => {
       console.log(res)
       updateFeatState(id)

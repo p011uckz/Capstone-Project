@@ -36,7 +36,7 @@ const Button = styled.button`
 
 const Prestige = ({ prestige, updatePrestigeClassState }) => {
   const deletePrestige = (id) => {
-    axios.delete(`http://localhost:3001/prestigeClass/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/prestigeClass/${id}`)
     .then(res => {
       console.log(res)
       updatePrestigeClassState(id)

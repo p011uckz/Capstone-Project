@@ -37,7 +37,7 @@ const Button = styled.button`
 const Core = ({ baseClass, updateBaseClassState }) => {
 
   const deleteBaseClass = (id) => {
-    axios.delete(`http://localhost:3001/baseClass/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/baseClass/${id}`)
     .then(res => {
       console.log(res)
       updateBaseClassState(id)

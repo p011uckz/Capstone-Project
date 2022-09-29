@@ -38,7 +38,7 @@ const Button = styled.button`
 const Weapon = ({ weapon, updateWeaponState }) => {
 
   const deleteWeapon = (id) => {
-    axios.delete(`http://localhost:3001/weapon/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/weapon/${id}`)
     .then(res => {
       console.log(res)
       updateWeaponState(id)

@@ -122,7 +122,7 @@ const NewRace = ({ addRace }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://localhost:3001/race', formData )
+        axios.post('http://https://ccp-backend.vercel.app/race', formData )
         .then(res => {
             setFormData(initialState)
             addRace({...res.data})

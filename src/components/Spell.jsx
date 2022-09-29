@@ -36,7 +36,7 @@ const Button = styled.button`
 const Spell = ({ spell, updateSpellState }) => {
 
   const deleteSpell = (id) => {
-    axios.delete(`http://localhost:3001/spell/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/spell/${id}`)
     .then(res => {
       console.log(res)
       updateSpellState(id)

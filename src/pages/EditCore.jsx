@@ -155,7 +155,7 @@ const EditCore = ({ setBaseClass }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://localhost:3001/baseClass/${id}`, formData )
+        axios.put(`http://https://ccp-backend.vercel.app/baseClass/${id}`, formData )
         .then(res => {
             
             setFormData(initialState)
@@ -165,7 +165,7 @@ const EditCore = ({ setBaseClass }) => {
     }
 
     useEffect(()=>{
-        axios.get(`http://localhost:3001/baseClass/${id}`)
+        axios.get(`http://https://ccp-backend.vercel.app/baseClass/${id}`)
         .then(res => {
             setFormData(res.data)
         })

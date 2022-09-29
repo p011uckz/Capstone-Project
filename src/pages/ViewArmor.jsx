@@ -61,13 +61,13 @@ const ViewArmor = ({ armors, updateArmorState }) => {
     const [ armor, setArmor ] = useState()
 
     useEffect(()=> {
-        fetch(`http://localhost:3001/armor/${id}`)
+        fetch(`http://https://ccp-backend.vercel.app/armor/${id}`)
         .then(res => res.json())
         .then(data => setArmor(data))
     }, [])
 
     const deleteArmor = (id) => {
-        axios.delete(`http://localhost:3001/armor/${id}`)
+        axios.delete(`http://https://ccp-backend.vercel.app/armor/${id}`)
         .then(res => {
           console.log(res)
           updateArmorState(id)

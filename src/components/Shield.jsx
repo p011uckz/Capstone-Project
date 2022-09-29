@@ -40,7 +40,7 @@ const Button = styled.button`
 const Shield = ({ shield, updateShieldState }) => {
 
   const deleteShield = (id) => {
-    axios.delete(`http://localhost:3001/shield/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/shield/${id}`)
     .then(res => {
       console.log(res)
       updateShieldState(id)

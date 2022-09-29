@@ -37,7 +37,7 @@ const Button = styled.button`
 const Race = ({ race, updateRaceState }) => {
 
   const deleteRace = (id) => {
-    axios.delete(`http://localhost:3001/race/${id}`)
+    axios.delete(`http://https://ccp-backend.vercel.app/race/${id}`)
     .then(res => {
       console.log(res)
       updateRaceState(id)
