@@ -154,7 +154,7 @@ const NewCoreClass = ({ addBaseClass }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://https://ccp-backend.vercel.app/api/baseClass', formData )
+        axios.post('https://ccp-backend.vercel.app/api/baseClass', formData )
         .then(res => {
             setFormData(initialState)
             addBaseClass({...res.data})

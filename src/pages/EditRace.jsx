@@ -125,7 +125,7 @@ const EditRace = ({ setRace }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://https://ccp-backend.vercel.app/api/race/${id}`, formData )
+        axios.put(`https://ccp-backend.vercel.app/api/race/${id}`, formData )
         .then(res => {
 
             setFormData(initialState)
@@ -135,7 +135,7 @@ const EditRace = ({ setRace }) => {
     }
 
     useEffect(()=>{
-        axios.get(`http://https://ccp-backend.vercel.app/api/race/${id}`)
+        axios.get(`https://ccp-backend.vercel.app/api/race/${id}`)
         .then(res => {
             setFormData(res.data)
         })

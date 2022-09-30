@@ -54,13 +54,13 @@ const ViewPrestige = ({ updatePrestigeClassState, prestige}) => {
     const [ prestigeClass, setBaseClass ] = useState()
 
     useEffect(()=> {
-        fetch(`http://https://ccp-backend.vercel.app/api/prestigeClass/${id}`)
+        fetch(`https://ccp-backend.vercel.app/api/prestigeClass/${id}`)
         .then(res => res.json())
         .then(data => setBaseClass(data))
     }, [])
 
     const deletePrestige = (id) => {
-    axios.delete(`http://https://ccp-backend.vercel.app/api/prestigeClass/${id}`)
+    axios.delete(`https://ccp-backend.vercel.app/api/prestigeClass/${id}`)
     .then(res => {
       console.log(res)
       updatePrestigeClassState(id)

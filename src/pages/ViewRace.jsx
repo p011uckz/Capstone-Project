@@ -54,13 +54,13 @@ const ViewRace = ({ updateRaceState, race }) => {
     const [ races, setRace ] = useState()
 
     useEffect(()=> {
-        fetch(`http://https://ccp-backend.vercel.app/api/race/${id}`)
+        fetch(`https://ccp-backend.vercel.app/api/race/${id}`)
         .then(res => res.json())
         .then(data => setRace(data))
     }, [])
 
     const deleteRace = (id) => {
-    axios.delete(`http://https://ccp-backend.vercel.app/api/race/${id}`)
+    axios.delete(`https://ccp-backend.vercel.app/api/race/${id}`)
     .then(res => {
       console.log(res)
       updateRaceState(id)

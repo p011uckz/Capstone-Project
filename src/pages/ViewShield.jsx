@@ -64,13 +64,13 @@ const ViewShield = ({updateShieldState, shield }) => {
     const [ shields, setShield ] = useState()
 
     useEffect(()=> {
-        fetch(`http://https://ccp-backend.vercel.app/api/shield/${id}`)
+        fetch(`https://ccp-backend.vercel.app/api/shield/${id}`)
         .then(res => res.json())
         .then(data => setShield(data))
     }, [])
 
     const deleteShield = (id) => {
-        axios.delete(`http://https://ccp-backend.vercel.app/api/shield/${id}`)
+        axios.delete(`https://ccp-backend.vercel.app/api/shield/${id}`)
         .then(res => {
           console.log(res)
           updateShieldState(id)

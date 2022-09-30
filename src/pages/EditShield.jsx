@@ -84,7 +84,7 @@ const EditShield = ({ setShield }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://https://ccp-backend.vercel.app/api/shield/${id}`, formData )
+        axios.put(`https://ccp-backend.vercel.app/api/shield/${id}`, formData )
         .then(res => {
 
             setFormData(initialState)
@@ -94,7 +94,7 @@ const EditShield = ({ setShield }) => {
     }
 
     useEffect(()=>{
-        axios.get(`http://https://ccp-backend.vercel.app/api/shield/${id}`)
+        axios.get(`https://ccp-backend.vercel.app/api/shield/${id}`)
         .then(res => {
             setFormData(res.data)
         })

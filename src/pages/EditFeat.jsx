@@ -99,7 +99,7 @@ const EditFeat = ({ setFeat }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.put(`http://https://ccp-backend.vercel.app/api/feat/${id}`, formData )
+        axios.put(`https://ccp-backend.vercel.app/api/feat/${id}`, formData )
         .then(res => {
 
             setFormData(initialState)
@@ -109,7 +109,7 @@ const EditFeat = ({ setFeat }) => {
     }
     
     useEffect(()=>{
-        axios.get(`http://https://ccp-backend.vercel.app/api/feat/${id}`)
+        axios.get(`https://ccp-backend.vercel.app/api/feat/${id}`)
         .then(res => {
             setFormData(res.data)
         })

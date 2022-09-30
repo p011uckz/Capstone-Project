@@ -86,7 +86,7 @@ const NewItem = ({ addItem }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://https://ccp-backend.vercel.app/api/item', formData )
+        axios.post('https://ccp-backend.vercel.app/api/item', formData )
         .then(res => {
             setFormData(initialState)
             addItem({...res.data})

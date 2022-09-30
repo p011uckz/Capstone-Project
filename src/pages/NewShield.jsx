@@ -82,7 +82,7 @@ const NewShield = ({ addShield }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(formData)
-        axios.post('http://https://ccp-backend.vercel.app/api/shield', formData )
+        axios.post('https://ccp-backend.vercel.app/api/shield', formData )
         .then(res => {
             setFormData(initialState)
             addShield({...res.data})
